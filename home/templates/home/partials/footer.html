@@ -1,68 +1,66 @@
+
 {% load static %}
 
 <footer class="ft-footer">
 
-    <!-- TOP BAR -->
+    <!-- TOP ACCENT BAR -->
     <div class="ft-top-bar"></div>
 
     <div class="ft-inner">
 
-        <!-- =========================================
-             MAIN FOOTER GRID
-        ========================================== -->
+        <!-- MAIN FOOTER GRID -->
         <div class="ft-main-grid">
 
             <!-- BRAND + CONTACT -->
             <div class="ft-brand-col">
 
-                <!-- Logo -->
-                
-<!-- WEBINARSUP BRAND LOGO -->
-<div class="ft-brand">
+                <!-- WEBINARSUP LOGO -->
+                <div class="ft-brand">
 
-    <img
-        src="{% static 'home/images/logo.png' %}"
-        alt="WebinarsUp"
-        class="ft-logo"
-    >
+                    <img
+                        src="{% static 'home/images/footer_logo.png' %}"
+                        alt="WebinarsUp"
+                        class="ft-logo"
+                        loading="lazy"
+                    >
 
-</div>
+                </div>
 
-
-
-                <!-- Contact Information -->
+                <!-- CONTACT INFORMATION -->
                 <div class="ft-contact-info">
 
-                    <!-- Address -->
+                    <!-- ADDRESS -->
                     <div class="ft-contact-item">
 
                         <div class="ft-contact-icon">
                             <i class="bi bi-geo-alt-fill"></i>
                         </div>
 
-                        <div>
+                        <div class="ft-contact-content">
+
                             <span class="ft-contact-label">
                                 Our Address
                             </span>
 
                             <p>
-                                8506 Madison Ave,Suite A<br>
+                                8506 Madison Ave, Suite A<br>
                                 Fair Oaks, CA 95628,<br>
                                 United States
                             </p>
+
                         </div>
 
                     </div>
 
-
-                    <!-- Email -->
+                    <!-- EMAIL -->
                     <div class="ft-contact-item">
 
                         <div class="ft-contact-icon">
                             <i class="bi bi-envelope-fill"></i>
                         </div>
 
-                        <div>
+                        <div class="ft-contact-content">
+
                             <span class="ft-contact-label">
                                 Contact Us
                             </span>
@@ -70,14 +68,14 @@
                             <a href="mailto:cs@webinarsup.com">
                                 cs@webinarsup.com
                             </a>
+
                         </div>
 
                     </div>
 
                 </div>
 
-
-                <!-- Trust Badges -->
+                <!-- TRUST BADGES -->
                 <div class="ft-trust-badges">
 
                     <span>
@@ -198,25 +196,19 @@
                     Your payments are processed securely using trusted payment methods.
                 </p>
 
-
-                <!-- Payment Image -->
+                <!-- PAYMENT IMAGE -->
                 <div class="ft-payment-image-wrap">
-
-                    <!--
-                        Upload your payment methods image here:
-                        home/static/home/images/payment-methods.png
-                    -->
 
                     <img
                         src="{% static 'home/images/payment.png' %}"
                         alt="Secure Payment Methods"
                         class="ft-payment-image"
+                        loading="lazy"
                     >
 
                 </div>
 
-
-                <!-- Security Text -->
+                <!-- SECURE CHECKOUT -->
                 <div class="ft-payment-secure">
 
                     <i class="bi bi-lock-fill"></i>
@@ -232,15 +224,11 @@
         </div>
 
 
-        <!-- =========================================
-             DIVIDER
-        ========================================== -->
+        <!-- DIVIDER -->
         <div class="ft-divider"></div>
 
 
-        <!-- =========================================
-             BOTTOM FOOTER
-        ========================================== -->
+        <!-- BOTTOM FOOTER -->
         <div class="ft-bottom">
 
             <div class="ft-copyright">
@@ -252,8 +240,7 @@
 
             </div>
 
-
-            <!-- Back To Top -->
+            <!-- BACK TO TOP -->
             <a
                 href="#"
                 class="ft-top-btn"

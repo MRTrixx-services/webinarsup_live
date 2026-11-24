@@ -1,11 +1,12 @@
 
 /* =========================================================
-   webinarsup FOOTER
-   DARK NAVY BLUE BACKGROUND + WHITE TEXT
+   WEBINARSUP FOOTER
+   DARK NAVY + SKY BLUE THEME
 ========================================================= */
 
 .ft-footer {
     position: relative;
+    width: 100%;
     background: #082F49;
     border-top: none;
     overflow: hidden;
@@ -13,13 +14,19 @@
 
 
 /* =========================================================
-   TOP ACCENT LINE
+   TOP ACCENT
 ========================================================= */
 
 .ft-top-bar {
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #0284C7, #38BDF8, #0284C7);
+
+    background: linear-gradient(
+        90deg,
+        #0284C7,
+        #38BDF8,
+        #0284C7
+    );
 }
 
 
@@ -29,9 +36,11 @@
 
 .ft-inner {
     width: 100%;
-    max-width: 1320px;
+    max-width: 1500px;
+
     margin: 0 auto;
-    padding: 65px 30px 25px;
+
+    padding: 65px 35px 25px;
 }
 
 
@@ -41,63 +50,58 @@
 
 .ft-main-grid {
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr 1.35fr;
-    gap: 45px;
+
+    grid-template-columns:
+        1.6fr
+        1fr
+        1fr
+        1.35fr;
+
+    gap: 40px;
+
     align-items: start;
 }
 
 
 /* =========================================================
-   BRAND
+   BRAND + LOGO
 ========================================================= */
 
 .ft-brand-col {
     min-width: 0;
 }
 
-
 .ft-brand {
     display: flex;
-    align-items: center;
-    gap: 13px;
-}
 
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    margin-bottom: 28px;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+}
 
 .ft-logo {
-    width: 58px;
-    height: 58px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid rgba(56,189,248,.30);
-}
-
-
-.ft-brand-name {
-    margin: 0;
-    color: #ffffff;
-    font-size: 24px;
-    line-height: 1.1;
-    font-weight: 800;
-}
-
-
-.ft-brand-name span {
-    color: #38BDF8;
-}
-
-
-.ft-brand small {
     display: block;
-    margin-top: 6px;
-    color: #ffffff;
-    font-size: 11px;
-    line-height: 1.5;
-}
 
+    width: 100%;
+    max-width: 360px;
 
-.ft-brand small i {
-    margin-right: 5px;
-    color: #38BDF8;
+    height: auto;
+
+    object-fit: contain;
+    object-position: left center;
+
+    border: none;
+    border-radius: 0;
+
+    background: transparent;
 }
 
 
@@ -106,66 +110,78 @@
 ========================================================= */
 
 .ft-contact-info {
-    margin-top: 28px;
+    margin-top: 25px;
 }
-
 
 .ft-contact-item {
     display: flex;
+
     align-items: flex-start;
+
     gap: 12px;
 }
-
 
 .ft-contact-item + .ft-contact-item {
     margin-top: 20px;
 }
 
-
 .ft-contact-icon {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     border: 1px solid rgba(56,189,248,.35);
-    border-radius: 8px;
+
+    border-radius: 9px;
 
     color: #38BDF8;
-    font-size: 16px;
+
+    font-size: 17px;
+
     background: rgba(2,132,199,.25);
 }
 
+.ft-contact-content {
+    min-width: 0;
+}
 
 .ft-contact-label {
     display: block;
-    margin-bottom: 5px;
 
-    color: #ffffff;
+    margin-bottom: 6px;
+
+    color: #FFFFFF;
+
     font-size: 13px;
     font-weight: 700;
 }
 
-
 .ft-contact-item p {
     margin: 0;
 
-    color: #ffffff;
-    font-size: 13px;
-    line-height: 1.7;
-}
+    color: #FFFFFF;
 
+    font-size: 13px;
+    line-height: 1.8;
+}
 
 .ft-contact-item a {
-    color: #ffffff;
-    font-size: 13px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+    color: #FFFFFF;
 
+    font-size: 13px;
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+
+    transition: color .3s ease;
+}
 
 .ft-contact-item a:hover {
     color: #38BDF8;
@@ -178,24 +194,28 @@
 
 .ft-trust-badges {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 8px;
 
     margin-top: 28px;
 }
 
-
 .ft-trust-badges span {
     display: inline-flex;
-    align-items: center;
-    gap: 5px;
 
-    padding: 7px 10px;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 8px 10px;
 
     border: 1px solid rgba(56,189,248,.25);
-    border-radius: 6px;
 
-    color: #ffffff;
+    border-radius: 7px;
+
+    color: #FFFFFF;
 
     font-size: 11px;
     font-weight: 600;
@@ -203,9 +223,9 @@
     background: rgba(2,132,199,.20);
 }
 
-
 .ft-trust-badges i {
     color: #38BDF8;
+
     font-size: 13px;
 }
 
@@ -218,26 +238,26 @@
     min-width: 0;
 }
 
-
 .ft-heading {
     display: flex;
+
     align-items: center;
-    gap: 8px;
+
+    gap: 9px;
 
     margin: 5px 0 24px;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     font-size: 15px;
     font-weight: 800;
 }
 
-
 .ft-heading i {
     color: #38BDF8;
-    font-size: 16px;
-}
 
+    font-size: 17px;
+}
 
 .ft-links {
     margin: 0;
@@ -246,44 +266,42 @@
     list-style: none;
 }
 
-
 .ft-links li + li {
-    margin-top: 14px;
+    margin-top: 15px;
 }
-
 
 .ft-links a {
     display: inline-flex;
+
     align-items: center;
+
     gap: 9px;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     font-size: 13px;
     font-weight: 500;
 
     text-decoration: none;
 
-    transition: all 0.25s ease;
+    transition: all .25s ease;
 }
-
 
 .ft-links a i {
     width: 16px;
 
     color: #38BDF8;
 
-    font-size: 13px;
+    font-size: 14px;
 
-    transition: transform 0.25s ease;
+    transition: transform .25s ease;
 }
-
 
 .ft-links a:hover {
     color: #38BDF8;
+
     transform: translateX(3px);
 }
-
 
 .ft-links a:hover i {
     transform: scale(1.1);
@@ -298,39 +316,40 @@
     min-width: 0;
 }
 
-
 .ft-payment-desc {
     margin: 0 0 20px;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 
-/* Payment Image Container */
+/* PAYMENT IMAGE */
 
 .ft-payment-image-wrap {
     width: 100%;
+
     display: flex;
+
     align-items: center;
     justify-content: flex-start;
+
     margin: 0;
     padding: 0;
+
     border: none;
     border-radius: 0;
+
     background: transparent;
 }
-
-
-/* Payment Image */
 
 .ft-payment-image {
     display: block;
 
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
 
     height: auto;
 
@@ -338,23 +357,26 @@
 }
 
 
-/* Secure Checkout */
+/* SECURE CHECKOUT */
 
 .ft-payment-secure {
     display: flex;
+
     align-items: center;
+
+    gap: 7px;
 
     margin-top: 16px;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     font-size: 12px;
     font-weight: 600;
 }
 
-
 .ft-payment-secure i {
     color: #38BDF8;
+
     font-size: 15px;
 }
 
@@ -379,23 +401,24 @@
 
 .ft-bottom {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     gap: 20px;
 }
 
-
 .ft-copyright {
     display: flex;
+
     align-items: center;
+
     gap: 6px;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     font-size: 12px;
 }
-
 
 .ft-copyright i {
     color: #38BDF8;
@@ -403,32 +426,40 @@
 
 
 /* =========================================================
-   BACK TO TOP BUTTON
+   BACK TO TOP
 ========================================================= */
 
 .ft-top-btn {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
+    flex-shrink: 0;
+
     border: 1px solid rgba(56,189,248,.40);
-    border-radius: 8px;
+
+    border-radius: 9px;
 
     background: rgba(2,132,199,.30);
+
     color: #38BDF8;
+
+    font-size: 17px;
 
     text-decoration: none;
 
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 }
-
 
 .ft-top-btn:hover {
     background: #0284C7;
-    color: #ffffff;
+
+    color: #FFFFFF;
+
     border-color: #0284C7;
 
     transform: translateY(-3px);
@@ -436,16 +467,27 @@
 
 
 /* =========================================================
-   TABLET
+   LARGE TABLET
 ========================================================= */
 
 @media (max-width: 1100px) {
 
+    .ft-inner {
+        padding: 55px 28px 25px;
+    }
+
     .ft-main-grid {
-        grid-template-columns: 1.5fr 1fr 1fr;
+        grid-template-columns:
+            1.4fr
+            1fr
+            1fr;
+
         gap: 35px;
     }
 
+    .ft-logo {
+        max-width: 320px;
+    }
 
     .ft-payment-col {
         grid-column: 1 / -1;
@@ -459,32 +501,33 @@
 
 
 /* =========================================================
-   MOBILE / SMALL TABLET
+   TABLET + MOBILE
 ========================================================= */
 
 @media (max-width: 767px) {
 
     .ft-inner {
-        padding: 50px 20px 22px;
+        padding: 50px 22px 22px;
     }
-
 
     .ft-main-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
         gap: 40px 25px;
     }
-
 
     .ft-brand-col,
     .ft-payment-col {
         grid-column: 1 / -1;
     }
 
-
     .ft-brand-col {
         padding-bottom: 5px;
     }
 
+    .ft-logo {
+        max-width: 340px;
+    }
 
     .ft-payment-col {
         max-width: none;
@@ -492,22 +535,19 @@
         margin-top: 0;
     }
 
-
     .ft-heading {
         margin-top: 0;
-        margin-bottom: 18px;
-    }
 
+        margin-bottom: 19px;
+    }
 
     .ft-contact-info {
         margin-top: 24px;
     }
 
-
     .ft-trust-badges {
         margin-top: 24px;
     }
-
 
     .ft-divider {
         margin-top: 40px;
@@ -523,69 +563,73 @@
 @media (max-width: 480px) {
 
     .ft-inner {
-        padding: 42px 16px 20px;
+        padding: 42px 18px 20px;
     }
-
 
     .ft-main-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+
         gap: 35px;
     }
-
 
     .ft-brand-col,
     .ft-payment-col {
         grid-column: auto;
     }
 
-
     .ft-brand {
-        align-items: center;
+        margin-bottom: 24px;
     }
-
 
     .ft-logo {
-        width: 52px;
-        height: 52px;
+        max-width: 300px;
     }
 
-
-    .ft-brand-name {
-        font-size: 21px;
+    .ft-contact-item {
+        gap: 11px;
     }
 
+    .ft-contact-icon {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+    }
 
     .ft-contact-item p,
     .ft-contact-item a {
         font-size: 12px;
     }
 
+    .ft-trust-badges {
+        gap: 7px;
+    }
+
+    .ft-trust-badges span {
+        padding: 7px 9px;
+
+        font-size: 10px;
+    }
 
     .ft-links li + li {
         margin-top: 13px;
     }
 
-
     .ft-links a {
         font-size: 13px;
     }
 
+    .ft-payment-image {
+        max-width: 260px;
+    }
 
     .ft-payment-image-wrap {
         min-height: auto;
-        padding: 0;
     }
-
-
-    .ft-payment-image {
-        max-width: 240px;
-    }
-
 
     .ft-divider {
         margin: 35px 0 18px;
     }
-
 
     .ft-bottom {
         flex-direction: column-reverse;
@@ -597,13 +641,35 @@
         gap: 15px;
     }
 
-
     .ft-copyright {
         justify-content: center;
 
         flex-wrap: wrap;
 
-        line-height: 1.6;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .ft-inner {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .ft-logo {
+        max-width: 260px;
+    }
+
+    .ft-trust-badges span {
+        font-size: 10px;
+        padding: 6px 7px;
     }
 
 }
