@@ -40,7 +40,7 @@ CSRF_TRUSTED_ORIGINS = [
     origin.strip()
     for origin in os.getenv(
         "CSRF_TRUSTED_ORIGINS",
-        "https://skilledwebinarspro.com,https://www.skilledwebinarspro.com",
+        "https://webinarsup.com,https://www.webinarsup.com",
     ).split(",")
     if origin.strip()
 ]
@@ -332,12 +332,12 @@ else:
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SECURE = True
     SESSION_COOKIE_SAMESITE = "Lax"
-    SESSION_COOKIE_DOMAIN = ".skilledwebinarspro.com"
+    SESSION_COOKIE_DOMAIN = ".webinarsuppro.com"
 
     CSRF_COOKIE_SECURE = True
     CSRF_COOKIE_HTTPONLY = False
     CSRF_COOKIE_SAMESITE = "Lax"
-    CSRF_COOKIE_DOMAIN = ".skilledwebinarspro.com"
+    CSRF_COOKIE_DOMAIN = ".webinarsuppro.com"
 
     # HTTPS is enforced by Nginx/Cloudflare.
     # Keep Django redirect disabled to avoid proxy redirect loops.
