@@ -1,0 +1,1012 @@
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   SKILLEDWEBINARS - SKY BLUE + BLACK NAVBAR
+========================================================= */
+
+:root {
+    --primary: #0284C7;
+    --primary-hover: #075985;
+    --primary-light: #38BDF8;
+
+    --black: #111111;
+    --dark: #1C1C1E;
+
+    --white: #FFFFFF;
+    --background: #F0F9FF;
+
+    --text-primary: #111111;
+    --text-secondary: #777777;
+
+    --border: #E0F2FE;
+}
+
+
+/* =========================================================
+   GLOBAL FONT
+========================================================= */
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.ws-navbar {
+    min-height: 78px;
+    padding: 0;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid var(--border);
+
+    z-index: 1030;
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+.ws-navbar.scrolled {
+    background: rgba(255, 255, 255, 0.90);
+
+    box-shadow:
+        0 8px 30px rgba(2, 132, 199, 0.08);
+
+    border-color:
+        rgba(224, 242, 254, 0.7);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.ws-brand {
+    text-decoration: none;
+
+    gap: 12px;
+
+    margin-right: 25px;
+}
+
+
+.ws-logo-wrapper {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: var(--white);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.ws-logo-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.ws-brand:hover .ws-logo-wrapper {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(2, 132, 199, 0.16);
+}
+
+
+.ws-brand:hover .ws-logo-img {
+    transform: scale(1.05);
+}
+
+
+.ws-brand-content {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+
+.ws-brand-title {
+    font-size: 1.35rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+
+    color: var(--black);
+}
+
+
+.ws-brand-title span {
+    color: var(--primary);
+}
+
+
+.ws-brand-sub {
+    margin-top: 5px;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION LINKS
+========================================================= */
+
+.ws-nav-links {
+    gap: 8px;
+}
+
+
+.ws-navbar .ws-nav-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    position: relative;
+
+    padding: 10px 16px !important;
+
+    border-radius: 999px;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    color: var(--primary) !important;
+
+    white-space: nowrap;
+
+    background:
+        rgba(2, 132, 199, 0);
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.ws-navbar .ws-nav-link::after {
+    display: none !important;
+}
+
+
+/* ICON */
+
+.ws-navbar .ws-nav-link i {
+    font-size: 0.95rem;
+
+    color: var(--primary);
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* HOVER */
+
+.ws-navbar .ws-nav-link:hover {
+    color: var(--black) !important;
+
+    background:
+        rgba(2, 132, 199, 0.10);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.ws-navbar .ws-nav-link:hover i {
+    color: var(--primary-hover);
+
+    transform:
+        scale(1.08);
+}
+
+
+/* ACTIVE PAGE */
+
+.ws-navbar .ws-nav-link.active {
+    color: var(--primary) !important;
+    background: rgba(2, 132, 199, 0.14);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(2, 132, 199, 0.10);
+}
+
+
+.ws-navbar .ws-nav-link.active i {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   RIGHT SIDE ACTIONS
+========================================================= */
+
+.ws-nav-actions {
+    gap: 8px;
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.ws-cart-link {
+    width: 44px;
+    height: 44px;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--black) !important;
+
+    background:
+        var(--background);
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ws-cart-link i {
+    font-size: 1.2rem;
+}
+
+
+.ws-cart-link:hover {
+    color: var(--primary) !important;
+
+    background:
+        rgba(2, 132, 199, 0.10);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* CART BADGE */
+
+.cart-badge {
+    position: absolute;
+
+    top: 1px;
+    right: 1px;
+
+    min-width: 18px;
+    height: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5px;
+
+    border: 2px solid var(--white);
+
+    border-radius: 50px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.ws-login-btn {
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border: 1.5px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--white);
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: all 0.25s ease;
+}
+
+
+.ws-login-btn i {
+    font-size: 0.95rem;
+    color: var(--primary);
+}
+
+
+.ws-login-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary-hover);
+    background: rgba(2, 132, 199, 0.06);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(2, 132, 199, 0.12);
+}
+
+
+/* =========================================================
+   GET STARTED BUTTON
+========================================================= */
+
+.ws-signup-btn {
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 7px 18px rgba(2, 132, 199, 0.20);
+
+    transition: all 0.25s ease;
+}
+
+
+.ws-signup-btn i {
+    font-size: 0.8rem;
+}
+
+
+.ws-signup-btn:hover {
+    background: var(--primary-hover);
+
+    color: var(--white);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(2, 132, 199, 0.30);
+}
+
+
+/* =========================================================
+   USER MENU
+========================================================= */
+
+.ws-user-menu {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 5px 10px !important;
+
+    border-radius: 12px;
+
+    color: var(--black) !important;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ws-user-menu:hover {
+    background:
+        var(--background);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.ws-user-icon {
+    width: 34px;
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(2, 132, 199, 0.12);
+
+    color: var(--primary);
+}
+
+
+.ws-user-name {
+    max-width: 150px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 0.83rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.ws-dropdown-menu {
+    min-width: 210px;
+
+    padding: 8px;
+
+    margin-top: 10px !important;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: var(--white);
+
+    box-shadow:
+        0 15px 40px rgba(17, 17, 17, 0.12);
+
+    animation:
+        wsDropdown 0.2s ease;
+}
+
+
+@keyframes wsDropdown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.ws-dropdown-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    color: var(--text-primary);
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.ws-dropdown-item:hover {
+    background:
+        rgba(2, 132, 199, 0.08);
+
+    color:
+        var(--black);
+
+    transform:
+        translateX(3px);
+}
+
+
+.ws-dropdown-icon {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        var(--background);
+
+    color:
+        var(--primary);
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.ws-dropdown-item:hover .ws-dropdown-icon {
+    background:
+        var(--primary);
+
+    color:
+        var(--white);
+}
+
+
+/* LOGOUT */
+
+.ws-logout {
+    color: #dc2626;
+}
+
+
+.ws-logout:hover {
+    background: #fff1f2;
+
+    color: #dc2626;
+}
+
+
+.ws-logout .ws-dropdown-icon {
+    color: #dc2626;
+
+    background: #fff1f2;
+}
+
+
+.dropdown-divider {
+    margin: 6px 4px;
+
+    border-color: var(--border);
+}
+
+
+/* =========================================================
+   MOBILE TOGGLER
+========================================================= */
+
+.ws-navbar-toggler {
+    width: 44px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 0;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+.ws-navbar-toggler:hover {
+    border-color: var(--primary);
+
+    background:
+        rgba(2, 132, 199, 0.08);
+}
+
+
+.ws-navbar-toggler:focus {
+    box-shadow:
+        0 0 0 4px rgba(2, 132, 199, 0.12);
+}
+
+
+/* =========================================================
+   TABLET + MOBILE
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .ws-navbar {
+        min-height: 70px;
+    }
+
+
+    .navbar-collapse {
+        margin-top: 8px;
+
+        padding: 14px;
+
+        background:
+            var(--white);
+
+        border-top:
+            1px solid var(--border);
+
+        border-radius:
+            0 0 18px 18px;
+
+        box-shadow:
+            0 14px 30px rgba(17, 17, 17, 0.08);
+    }
+
+
+    .ws-nav-links {
+        width: 100%;
+
+        gap: 6px;
+
+        padding-bottom: 14px;
+
+        margin-bottom: 14px !important;
+
+        border-bottom:
+            1px solid var(--border);
+    }
+
+
+    .ws-navbar .ws-nav-link {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding:
+            13px 15px !important;
+
+        border-radius: 12px;
+
+        font-size: 0.9rem;
+
+        color: var(--black) !important;
+    }
+
+
+    .ws-navbar .ws-nav-link::after {
+        display: none !important;
+    }
+
+
+    .ws-navbar .ws-nav-link:hover {
+        color: var(--primary-hover) !important;
+        background: rgba(2, 132, 199, 0.10);
+
+        transform:
+            translateX(3px);
+    }
+
+
+    .ws-navbar .ws-nav-link.active {
+        background:
+            rgba(2, 132, 199, 0.16);
+
+        color:
+            var(--black) !important;
+
+        box-shadow:
+            inset 0 0 0 1px rgba(2, 132, 199, 0.08);
+    }
+
+
+    .ws-nav-actions {
+        flex-direction: row !important;
+
+        flex-wrap: wrap;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+
+    .ws-cart-link {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .ws-user-menu {
+        padding: 6px 8px !important;
+    }
+
+
+    .ws-dropdown-menu {
+        position: static !important;
+
+        width: 100%;
+
+        margin-top: 8px !important;
+
+        box-shadow: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .ws-navbar .container-fluid {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+
+    .ws-logo-wrapper {
+        width: 44px;
+        height: 44px;
+
+        border-radius: 11px;
+    }
+
+
+    .ws-brand {
+        gap: 9px;
+
+        margin-right: 10px;
+    }
+
+
+    .ws-brand-title {
+        font-size: 1.12rem;
+    }
+
+
+    .ws-brand-sub {
+        font-size: 0.53rem;
+
+        letter-spacing: 0.8px;
+    }
+
+
+    .ws-navbar-toggler {
+        width: 42px;
+        height: 40px;
+    }
+
+
+    .navbar-collapse {
+        margin-left: -4px;
+        margin-right: -4px;
+
+        padding: 12px;
+
+        border-radius:
+            0 0 14px 14px;
+    }
+
+
+    .ws-navbar .ws-nav-link {
+        padding:
+            12px 14px !important;
+
+        font-size: 0.88rem;
+    }
+
+
+    .ws-nav-actions {
+        gap: 8px;
+    }
+
+
+    .ws-login-btn {
+        height: 40px;
+
+        padding: 0 14px;
+
+        font-size: 0.8rem;
+    }
+
+
+    .ws-signup-btn {
+        height: 40px;
+
+        padding: 0 15px;
+
+        font-size: 0.8rem;
+    }
+
+
+    .ws-cart-link {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+    }
+
+
+    .ws-user-name {
+        max-width: 110px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .ws-brand-sub {
+        display: none;
+    }
+
+
+    .ws-brand-title {
+        font-size: 1rem;
+    }
+
+
+    .ws-logo-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .ws-login-btn,
+    .ws-signup-btn {
+        padding: 0 12px;
+    }
+
+}
+
+
+/* =========================================
+   WEBINARUP LOGO
+========================================= */
+
+.ws-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 25px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.ws-logo-img {
+    display: block;
+    width: 250px;
+    height: auto;
+    max-height: 65px;
+    object-fit: contain;
+    object-position: left center;
+    transition: transform 0.3s ease;
+}
+
+.ws-brand:hover .ws-logo-img {
+    transform: scale(1.02);
+}
+
+/* TABLET */
+
+@media (max-width: 991.98px) {
+    .ws-logo-img {
+        width: 220px;
+        max-height: 58px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 575.98px) {
+    .ws-logo-img {
+        width: 190px;
+        max-height: 50px;
+    }
+
+    .ws-brand {
+        margin-right: 8px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .ws-logo-img {
+        width: 165px;
+        max-height: 45px;
+    }
+}

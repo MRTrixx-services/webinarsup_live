@@ -1,0 +1,863 @@
+﻿{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}skilledwebinars | Compliance & Professional Training Webinars{% endblock %}
+
+{% block extra_css %}
+<meta name="description"
+      content="skilledwebinars provides live and recorded compliance webinars for professionals across the USA. Stay compliant, stay ahead.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     HERO SECTION
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section class="hp-hero">
+
+    <!-- Decorative Background -->
+    <div class="hp-hero-bg"></div>
+    <div class="hp-hero-orb hp-hero-orb-one"></div>
+    <div class="hp-hero-orb hp-hero-orb-two"></div>
+
+    <div class="container hp-hero-inner">
+
+        <!-- =========================
+             LEFT CONTENT
+        ========================== -->
+        <div class="hp-hero-content" data-reveal="left">
+
+            <!-- Badge -->
+            <span class="hp-badge">
+                <i class="fas fa-shield-alt"></i>
+                HR &amp; Compliance Training Platform
+            </span>
+
+
+            <!-- Main Heading -->
+            <h1 class="hp-title">
+                Stay Informed.<br>
+                <span>Stay Compliant.</span>
+            </h1>
+
+
+            <!-- Description -->
+            <p class="hp-subtitle">
+                Access expert-led live and on-demand webinars covering
+                workplace compliance, HR practices, and professional
+                development â€” all in one trusted learning platform.
+            </p>
+
+
+            <!-- Quick Benefits -->
+            <div class="hp-quick-benefits">
+
+                <div class="hp-quick-benefit">
+                    <i class="fas fa-video"></i>
+                    <span>Live Expert-Led Webinars</span>
+                </div>
+
+                <div class="hp-quick-benefit">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Industry Professionals</span>
+                </div>
+
+                <div class="hp-quick-benefit">
+                    <i class="fas fa-play-circle"></i>
+                    <span>On-Demand Learning</span>
+                </div>
+
+            </div>
+
+
+            <!-- CTA Buttons -->
+            <div class="hp-actions">
+
+                <a href="{% url 'accounts:register' %}"
+                   class="hp-btn-primary">
+
+                    Get Started Free
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="{% url 'live_webinars:list' %}"
+                   class="hp-btn-outline">
+
+                    Browse Upcoming Webinars
+
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Login -->
+            <p class="hp-login-text">
+                Already a member?
+
+                <a href="{% url 'accounts:login' %}">
+                    Log in
+                </a>
+            </p>
+
+
+            <!-- =========================
+                 HERO STATS
+            ========================== -->
+            <div class="hp-hero-stats">
+
+                <div class="hp-stat">
+
+                    <strong>500+</strong>
+
+                    <span>Organizations</span>
+
+                </div>
+
+
+                <div class="hp-stat-divider"></div>
+
+
+                <div class="hp-stat">
+
+                    <strong>200+</strong>
+
+                    <span>Expert Webinars</span>
+
+                </div>
+
+
+                <div class="hp-stat-divider"></div>
+
+
+                <div class="hp-stat">
+
+                    <strong>50+</strong>
+
+                    <span>Top Instructors</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             RIGHT HERO IMAGE
+        ========================== -->
+        <div class="hp-hero-visual" data-reveal="right">
+
+            <!-- Decorative Dots -->
+            <div class="hp-visual-dots"></div>
+
+
+            <div class="hp-hero-image-wrapper">
+
+                <!-- Small Badge -->
+                <div class="hp-live-label">
+
+                    <span class="hp-live-dot"></span>
+
+                    EXPERT-LED LEARNING
+
+                </div>
+
+
+                <!-- HERO IMAGE -->
+                <img
+                    src="{% static 'home/images/hero-girl.png' %}"
+                    alt="Professional learning through skilledwebinars"
+                    class="hp-hero-image"
+                >
+
+
+                <!-- Bottom Toolbar -->
+                <div class="hp-image-toolbar">
+
+                    <span>
+                        <i class="fas fa-video"></i>
+                    </span>
+
+                    <span>
+                        <i class="fas fa-users"></i>
+                    </span>
+
+                    <span>
+                        <i class="fas fa-certificate"></i>
+                    </span>
+
+                    <span>
+                        <i class="fas fa-comments"></i>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 FLOATING CARD - EXPERTS
+            ========================== -->
+            <div class="hp-floating-card hp-floating-experts">
+
+                <div class="hp-floating-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+
+                <div>
+
+                    <strong>Expert Instructors</strong>
+
+                    <span>
+                        Learn from industry professionals
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 FLOATING CARD - LIVE
+            ========================== -->
+            <div class="hp-floating-card hp-floating-live">
+
+                <div class="hp-floating-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+
+                <div>
+
+                    <strong>Live Interaction</strong>
+
+                    <span>
+                        Ask questions and engage in real time
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 FLOATING CARD - CERTIFICATE
+            ========================== -->
+            <div class="hp-floating-card hp-floating-certificate">
+
+                <div class="hp-floating-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+
+                <div>
+
+                    <strong>Professional Growth</strong>
+
+                    <span>
+                        Build knowledge and earn certificates
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     FEATURES STRIP
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section class="hp-features">
+
+    <div class="container">
+
+        <div class="hp-features-grid" data-reveal="up">
+
+
+            <div class="hp-feature-item">
+
+                <div class="hp-feature-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="22"
+                         height="22"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
+
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h5>Live Webinars</h5>
+                    <p>Real-time sessions with live Q&amp;A</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="hp-feature-item">
+
+                <div class="hp-feature-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="22"
+                         height="22"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h5>On-Demand Access</h5>
+                    <p>Watch recorded sessions anytime</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="hp-feature-item">
+
+                <div class="hp-feature-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="22"
+                         height="22"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 01-6 0z"/>
+
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h5>Expert Instructors</h5>
+                    <p>Learn from top industry professionals</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     UPCOMING WEBINARS
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+{% if upcoming_webinars %}
+
+<section class="hp-upcoming">
+
+    <div class="container">
+
+
+        <div class="hp-section-head">
+
+            <span class="hp-section-badge" data-reveal="up">
+                Live Webinars
+            </span>
+
+            <h2>
+                Upcoming
+                <span>Live Sessions</span>
+            </h2>
+
+            <p>
+                Register now for our expert-led live webinars â€”
+                limited seats available
+            </p>
+
+        </div>
+
+
+
+        <div class="hp-upcoming-grid" data-reveal="up">
+
+            {% load tz %}
+
+            {% for webinar in upcoming_webinars %}
+
+            <div class="webinar-item">
+
+
+                <div class="webinar-card-header">
+
+                    {% if webinar.instructor.photo %}
+
+                    <img
+                        src="{{ webinar.instructor.photo.url }}"
+                        alt="{{ webinar.instructor.name }}"
+                        class="instructor-photo"
+                    >
+
+                    {% endif %}
+
+
+                    <div class="date-badge">
+
+                        <span class="badge-month">
+                            {{ webinar.start_datetime|date:"M Y" }}
+                        </span>
+
+                        <span class="badge-day">
+                            {{ webinar.start_datetime|date:"d" }}
+                        </span>
+
+                    </div>
+
+
+                    {% if webinar.dynamic_status == "LIVE" %}
+
+                    <div class="status-pill live-now">
+
+                        <span class="live-dot"></span>
+
+                        LIVE NOW
+
+                    </div>
+
+                    {% else %}
+
+                    <div class="status-pill upcoming">
+
+                        <span
+                            class="countdown"
+                            data-start="{{ webinar.start_datetime|date:'c' }}">
+                        </span>
+
+                    </div>
+
+                    {% endif %}
+
+                </div>
+
+
+
+                <div class="webinar-card-body">
+
+                    <h5 class="webinar-title">
+                        {{ webinar.title }}
+                    </h5>
+
+
+                    <div class="card-instructor">
+
+                        <p class="name">
+                            {{ webinar.instructor.name }}
+                        </p>
+
+                        <p class="designation">
+                            {{ webinar.instructor.designation }}
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="card-meta">
+
+                        <i class="fas fa-clock"></i>
+
+                        {% timezone "America/Los_Angeles" %}
+                        {{ webinar.start_datetime|date:"h:i A T" }}
+                        {% endtimezone %}
+
+                        <span class="sep">|</span>
+
+                        {% timezone "America/New_York" %}
+                        {{ webinar.start_datetime|date:"h:i A T" }}
+                        {% endtimezone %}
+
+                        <span class="sep">â€¢</span>
+
+                        <i class="fas fa-hourglass-end"></i>
+
+                        {{ webinar.duration_minutes }} min
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="webinar-card-footer">
+
+                    {% if webinar.pricing %}
+
+                    <span class="price-tag">
+                        $ {{ webinar.pricing.live_single_price }}
+                    </span>
+
+                    {% endif %}
+
+
+                    <a
+                        href="{% url 'live_webinars:detail' webinar.webinar_id webinar.slug %}"
+                        class="enroll-btn">
+
+                        Enroll Now
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+
+        <div class="hp-upcoming-cta">
+
+            <a
+                href="{% url 'live_webinars:list' %}"
+                class="hp-btn-primary">
+
+                View All Live Webinars
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     TESTIMONIALS
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section class="hp-testimonials">
+
+    <div class="container">
+
+        <div class="hp-section-head">
+
+            <span class="hp-section-badge" data-reveal="up">
+                Testimonials
+            </span>
+
+            <h2>
+                What Our
+                <span>Learners Say</span>
+            </h2>
+
+            <p>
+                Hear directly from compliance professionals
+                who trust skilledwebinars
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hp-testi-outer">
+
+        <div class="hp-testi-track hp-testi-ltr">
+
+
+            <div class="hp-testi-card">
+
+                <div class="hp-testi-stars">
+                    â˜…â˜…â˜…â˜…â˜…
+                </div>
+
+                <p>
+                    "The live webinar on HR compliance was incredibly practical.
+                    The instructor answered every question in real time.
+                    Worth every penny!"
+                </p>
+
+                <div class="hp-testi-author">
+
+                    <div class="hp-testi-avatar">
+                        J
+                    </div>
+
+                    <div>
+                        <strong>Jennifer Mitchell</strong>
+                        <span>HR Manager, Austin, TX</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hp-testi-card">
+
+                <div class="hp-testi-stars">
+                    â˜…â˜…â˜…â˜…â˜…
+                </div>
+
+                <p>
+                    "I purchased the recorded webinar on workforce planning
+                    and watched it at my own pace.
+                    The content was structured brilliantly!"
+                </p>
+
+                <div class="hp-testi-author">
+
+                    <div class="hp-testi-avatar">
+                        M
+                    </div>
+
+                    <div>
+                        <strong>Mark Thompson</strong>
+                        <span>Operations Lead, Denver, CO</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hp-testi-card featured">
+
+                <div class="hp-testi-stars">
+                    â˜…â˜…â˜…â˜…â˜…
+                </div>
+
+                <p>
+                    "Joining the live webinar on talent acquisition
+                    was a game-changer.
+                    The expert insights helped me revamp our entire hiring process."
+                </p>
+
+                <div class="hp-testi-author">
+
+                    <div class="hp-testi-avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong>Sarah Williams</strong>
+                        <span>Talent Acquisition Head, Chicago, IL</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hp-testi-card">
+
+                <div class="hp-testi-stars">
+                    â˜…â˜…â˜…â˜…â˜†
+                </div>
+
+                <p>
+                    "The recorded webinar library is a goldmine.
+                    I've watched 5 sessions so far and each one has
+                    directly impacted how I manage my team."
+                </p>
+
+                <div class="hp-testi-author">
+
+                    <div class="hp-testi-avatar">
+                        B
+                    </div>
+
+                    <div>
+                        <strong>Brian Carter</strong>
+                        <span>Team Lead, Seattle, WA</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DUPLICATE FOR SEAMLESS TESTIMONIAL LOOP -->
+
+            <div class="hp-testi-card">
+
+                <div class="hp-testi-stars">
+                    â˜…â˜…â˜…â˜…â˜…
+                </div>
+
+                <p>
+                    "The live webinar on HR compliance was incredibly practical.
+                    The instructor answered every question in real time.
+                    Worth every penny!"
+                </p>
+
+                <div class="hp-testi-author">
+
+                    <div class="hp-testi-avatar">
+                        J
+                    </div>
+
+                    <div>
+                        <strong>Jennifer Mitchell</strong>
+                        <span>HR Manager, Austin, TX</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hp-testi-card">
+
+                <div class="hp-testi-stars">
+                    â˜…â˜…â˜…â˜…â˜…
+                </div>
+
+                <p>
+                    "I purchased the recorded webinar on workforce planning
+                    and watched it at my own pace."
+                </p>
+
+                <div class="hp-testi-author">
+
+                    <div class="hp-testi-avatar">
+                        M
+                    </div>
+
+                    <div>
+                        <strong>Mark Thompson</strong>
+                        <span>Operations Lead, Denver, CO</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     CTA BANNER
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section class="hp-cta">
+
+    <div class="container hp-cta-inner" data-reveal="up">
+
+
+        <div>
+
+            <h2>
+                Ready to keep your organization compliant?
+            </h2>
+
+            <p>
+                Join thousands of professionals who trust skilledwebinars
+                for their compliance training.
+            </p>
+
+        </div>
+
+
+
+        <div class="hp-cta-actions">
+
+            <a
+                href="{% url 'accounts:register' %}"
+                class="hp-btn-primary">
+
+                Start Free Today
+
+            </a>
+
+
+            <a
+                href="{% url 'home:contact' %}"
+                class="hp-cta-link">
+
+                Talk to us
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<script>
+(function(){
+    var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+            if(e.isIntersecting){
+                e.target.classList.add('is-visible');
+                io.unobserve(e.target);
+            }
+        });
+    },{threshold:0.15});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+
+{% endblock %}

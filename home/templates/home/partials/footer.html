@@ -1,0 +1,276 @@
+{% load static %}
+
+<footer class="ft-footer">
+
+    <!-- TOP BAR -->
+    <div class="ft-top-bar"></div>
+
+    <div class="ft-inner">
+
+        <!-- =========================================
+             MAIN FOOTER GRID
+        ========================================== -->
+        <div class="ft-main-grid">
+
+            <!-- BRAND + CONTACT -->
+            <div class="ft-brand-col">
+
+                <!-- Logo -->
+                <div class="ft-brand">
+                    <img
+                        src="{% static 'home/images/logo21.jpeg' %}"
+                        alt="skilledwebinars Logo"
+                        class="ft-logo"
+                    >
+
+                    <div>
+                        <h5 class="ft-brand-name">
+                            Skilled<span>Webinars</span>
+                        </h5>
+
+                        <small>
+                            <i class="bi bi-mortarboard-fill"></i>
+                            Compliance Webinar Platform
+                        </small>
+                    </div>
+                </div>
+
+
+                <!-- Contact Information -->
+                <div class="ft-contact-info">
+
+                    <!-- Address -->
+                    <div class="ft-contact-item">
+
+                        <div class="ft-contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div>
+                            <span class="ft-contact-label">
+                                Our Address
+                            </span>
+
+                            <p>
+                                8506 Madison Ave,Suite A<br>
+                                Fair Oaks, CA 95628,<br>
+                                United States
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="ft-contact-item">
+
+                        <div class="ft-contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+
+                        <div>
+                            <span class="ft-contact-label">
+                                Contact Us
+                            </span>
+
+                            <a href="mailto:contact@skilledwebinarspro.com">
+                                contact@skilledwebinarspro.com
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Trust Badges -->
+                <div class="ft-trust-badges">
+
+                    <span>
+                        <i class="bi bi-shield-check"></i>
+                        Secure
+                    </span>
+
+                    <span>
+                        <i class="bi bi-headset"></i>
+                        24/7 Support
+                    </span>
+
+                    <span>
+                        <i class="bi bi-people"></i>
+                        50K+ Users
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRAINING -->
+            <div class="ft-links-col">
+
+                <h6 class="ft-heading">
+                    <i class="bi bi-mortarboard-fill"></i>
+                    Training
+                </h6>
+
+                <ul class="ft-links">
+
+                    <li>
+                        <a href="{% url 'live_webinars:list' %}">
+                            <i class="bi bi-broadcast"></i>
+                            Live Webinars
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'recorded_webinars:list' %}">
+                            <i class="bi bi-collection-play-fill"></i>
+                            Recorded Webinars
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'home:about' %}">
+                            <i class="bi bi-info-circle-fill"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'home:contact' %}">
+                            <i class="bi bi-envelope-fill"></i>
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- LEGAL -->
+            <div class="ft-links-col">
+
+                <h6 class="ft-heading">
+                    <i class="bi bi-shield-shaded"></i>
+                    Legal
+                </h6>
+
+                <ul class="ft-links">
+
+                    <li>
+                        <a href="{% url 'home:terms' %}">
+                            <i class="bi bi-file-text-fill"></i>
+                            Terms & Conditions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'home:privacy' %}">
+                            <i class="bi bi-lock-fill"></i>
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'home:refund' %}">
+                            <i class="bi bi-arrow-return-left"></i>
+                            Refund Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'home:shipping' %}">
+                            <i class="bi bi-truck"></i>
+                            Shipping & Return
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- SECURE PAYMENTS -->
+            <div class="ft-payment-col">
+
+                <h6 class="ft-heading">
+                    <i class="bi bi-shield-lock-fill"></i>
+                    Secure Payments
+                </h6>
+
+                <p class="ft-payment-desc">
+                    Your payments are processed securely using trusted payment methods.
+                </p>
+
+
+                <!-- Payment Image -->
+                <div class="ft-payment-image-wrap">
+
+                    <!--
+                        Upload your payment methods image here:
+                        home/static/home/images/payment-methods.png
+                    -->
+
+                    <img
+                        src="{% static 'home/images/payment.png' %}"
+                        alt="Secure Payment Methods"
+                        class="ft-payment-image"
+                    >
+
+                </div>
+
+
+                <!-- Security Text -->
+                <div class="ft-payment-secure">
+
+                    <i class="bi bi-lock-fill"></i>
+
+                    <span>
+                        Safe & Secure Checkout
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             DIVIDER
+        ========================================== -->
+        <div class="ft-divider"></div>
+
+
+        <!-- =========================================
+             BOTTOM FOOTER
+        ========================================== -->
+        <div class="ft-bottom">
+
+            <div class="ft-copyright">
+
+                <i class="bi bi-c-circle"></i>
+
+                {{ year|default:2026 }} skilledwebinars.
+                All rights reserved.
+
+            </div>
+
+
+            <!-- Back To Top -->
+            <a
+                href="#"
+                class="ft-top-btn"
+                id="backToTop"
+                aria-label="Back to top"
+            >
+                <i class="bi bi-arrow-up"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>

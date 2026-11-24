@@ -1,0 +1,244 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg ws-navbar sticky-top">
+    <div class="container-fluid px-lg-4 px-3">
+
+        <!-- =========================
+             BRAND
+        ========================== -->
+        
+<!-- WEBINARUP BRAND -->
+<a class="navbar-brand ws-brand"
+   href="{% url 'home:home' %}">
+
+    <img src="{% static 'home/images/logo.png' %}"
+         alt="WebinarUp.com"
+         class="ws-logo-img">
+
+</a>
+
+
+        <!-- =========================
+             MOBILE TOGGLER
+        ========================== -->
+        <button class="navbar-toggler ws-navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- =========================
+             NAVIGATION
+        ========================== -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+
+            <!-- =========================
+                 MAIN NAVIGATION LINKS
+            ========================== -->
+            <ul class="navbar-nav mx-auto ws-nav-links">
+
+
+                <!-- ABOUT -->
+                <li class="nav-item">
+
+                    <a class="nav-link ws-nav-link
+                        {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+                       href="{% url 'home:about' %}">
+
+                        <i class="bi bi-info-square-fill"></i>
+
+                        <span>About</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- LIVE WEBINARS -->
+                <li class="nav-item">
+
+                    <a class="nav-link ws-nav-link
+                        {% if request.resolver_match.namespace == 'live_webinars' %}active{% endif %}"
+                       href="{% url 'live_webinars:list' %}">
+
+                        <i class="fa-solid fa-play"></i>
+
+                        <span>Live Webinars</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- RECORDED WEBINARS -->
+                <li class="nav-item">
+
+                    <a class="nav-link ws-nav-link
+                        {% if request.resolver_match.namespace == 'recorded_webinars' %}active{% endif %}"
+                       href="{% url 'recorded_webinars:list' %}">
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <span>Recorded Webinars</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- CONTACT -->
+                <li class="nav-item">
+
+                    <a class="nav-link ws-nav-link
+                        {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+                       href="{% url 'home:contact' %}">
+
+                        <i class="fa-solid fa-headphones"></i>
+
+                        <span>Contact</span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- =========================
+                 RIGHT SIDE ACTIONS
+            ========================== -->
+            <ul class="navbar-nav ws-nav-actions align-items-lg-center">
+
+
+                <!-- CART -->
+                <li class="nav-item">
+
+                    <a class="nav-link ws-cart-link position-relative"
+                       href="{% url 'cart:cart_page' %}"
+                       aria-label="Shopping Cart">
+
+                        <i class="bi bi-cart3"></i>
+
+                        {% if cart_count > 0 %}
+                            <span class="cart-badge">
+                                {{ cart_count }}
+                            </span>
+                        {% endif %}
+
+                    </a>
+
+                </li>
+
+
+                <!-- =========================
+                     AUTHENTICATED USER
+                ========================== -->
+                {% if request.user.is_authenticated %}
+
+                    <li class="nav-item dropdown ws-user-dropdown">
+
+                        <a class="nav-link dropdown-toggle ws-user-menu"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+
+                            <span class="ws-user-icon">
+                                
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+
+                            <span class="ws-user-name">
+                                Hi {{ request.user.first_name|default:request.user.email }}
+                            </span>
+
+                        </a>
+
+
+                        <!-- USER DROPDOWN -->
+                        <ul class="dropdown-menu dropdown-menu-end ws-dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item ws-dropdown-item"
+                                   href="{% url 'profile:enrollments' %}">
+
+                                    <span class="ws-dropdown-icon">
+                                        <i class="bi bi-headset"></i>
+                                    </span>
+
+                                    <span>My Profile</span>
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+
+                            <li>
+                                <a class="dropdown-item ws-dropdown-item ws-logout"
+                                   href="{% url 'accounts:logout' %}">
+
+                                    <span class="ws-dropdown-icon">
+                                        <i class="bi bi-box-arrow-right"></i>
+                                    </span>
+
+                                    <span>Logout</span>
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                {% else %}
+
+
+                    <!-- LOGIN -->
+                    <li class="nav-item">
+
+                        <a class="ws-login-btn"
+                           href="{% url 'accounts:login' %}">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <span>Login</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- SIGN UP -->
+                    <li class="nav-item">
+
+                        <a class="ws-signup-btn"
+                           href="{% url 'accounts:register' %}">
+
+                            <i class="fa-solid fa-play"></i>
+
+                            <span>Create Account</span>
+
+                        </a>
+
+                    </li>
+
+                {% endif %}
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
